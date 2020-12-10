@@ -24,8 +24,14 @@ var app = new Vue(
     methods: {
 
       addTodo() {
-        this.taskList.push(this.todo);
-        this.todo = "";
+
+        if (this.todo == "") {
+          alert("Inserisci un'attività!");
+        } else {
+          this.taskList.push(this.todo);
+          this.todo = "";
+        }
+
       },
 
       removeTodo(i) {
