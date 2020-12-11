@@ -21,10 +21,10 @@
         <input v-model="todo" @keyup.enter="addTodo" type="text" name="" value="" placeholder="Nuova attività">
 
         <button @click="addTodo" type="button" name="button">Aggiungi</button>
-        
+
         <ul>
           <li v-for="(task, index) in taskList">
-            {{ task }}<i class="fas fa-check" @click="removeTodo(task)"></i>
+            {{ task }}<i class="fas fa-check" @click="removeTodo(index)"></i>
           </li>
         </ul>
 

@@ -34,9 +34,8 @@ var app = new Vue(
 
       },
 
-      removeTodo(i) {
-        let todoIndex = this.taskList.indexOf(i);
-        this.taskList.splice(todoIndex, 1);
+      removeTodo(indexToRemove) {
+        this.taskList.splice(indexToRemove, 1);
       }
 
     }
