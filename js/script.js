@@ -12,11 +12,11 @@ var app = new Vue(
 
     data: {
       taskList: [
-        "Prendere il caffè",
-        "Rifare il letto",
-        "Seguire la lezione di Gianluca",
-        "Pranzare",
-        "Fare l'esercitazione"
+        "prendere il caffè",
+        "rifare il letto",
+        "seguire la lezione di Gianluca",
+        "pranzare",
+        "fare l'esercitazione"
       ],
       todo: "",
     },
@@ -25,10 +25,12 @@ var app = new Vue(
 
       addTodo() {
 
-        if (this.todo == "") {
-          alert("Inserisci un'attività!");
+        let lowerCaseInput = this.todo.toLowerCase();
+
+        if (lowerCaseInput == "" || this.taskList.includes(lowerCaseInput)) {
+          alert("Non inserire attività vuote o doppie");
         } else {
-          this.taskList.push(this.todo);
+          this.taskList.push(lowerCaseInput);
           this.todo = "";
         }
 

@@ -73,6 +73,7 @@ li {
   border-bottom: 1px dashed black;
   display: flex;
   justify-content: space-between;
+  text-transform: capitalize;
 }
 
 li:last-child {
